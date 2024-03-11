@@ -1,17 +1,30 @@
 import classNames from 'classnames/bind';
 import styles from './Header.module.scss';
+import images from '~/assets/images';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleXmark, faSpinner, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 const cx = classNames.bind(styles);
 
+console.log(images.logo);
 function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <div className={cx('logo')}>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="118" height="42" fill="currentColor" alt="TikTok">
-                        <use xlink:href="#logo-dark-c4561408"></use>
-                    </svg>
+                <div>
+                    <img src={images.logo} alt="Tiktok" />
                 </div>
+                <div className={cx('search')}>
+                    <input placeholder="Tìm kiếm" spellCheck={false} />
+                    <button className={cx('clear')}>
+                        <FontAwesomeIcon icon={faCircleXmark} />
+                    </button>
+                    <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />
+                    <button className={cx('search-btn')}>
+                        <FontAwesomeIcon icon={faMagnifyingGlass} />
+                    </button>
+                </div>
+                <div className={cx('actions')}></div>
             </div>
         </header>
     );
