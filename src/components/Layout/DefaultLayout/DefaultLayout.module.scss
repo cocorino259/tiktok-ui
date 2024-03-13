@@ -6,11 +6,10 @@
 
 .container {
     width: 100%;
-    min-height: 100px;
+    margin-top: var(--default-layout-header-height);
     display: flex;
 }
 
 .content {
     flex: 1;
-    min-height: 1000px;
 }

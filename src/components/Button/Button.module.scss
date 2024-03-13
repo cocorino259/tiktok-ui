@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: center;
     min-width: 100px;
+    font-family: var(--font-family);
     font-size: 1.6rem;
     font-weight: 700;
     height: 36px;
@@ -72,4 +73,10 @@
 .icon + .title,
 .title + .icon {
     margin-left: 8px;
+}
+
+.icon {
+    display: block;
+    width: 24px;
+    text-align: center;
 }
